@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css.css" rel="stylesheet">
+  <style>
+    .transparent-box {
+      background-color: rgba(255, 255, 255, 0.5); /* Warna background dengan opasitas 50% */
+      padding: 20px; /* Padding untuk isi kotak */
+      border-radius: 10px; /* Border radius untuk membuat sudut kotak menjadi melengkung */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan agar terlihat seperti melayang */
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas PDW 5</title>
+</head>
+<body>
+  <div class="container">
+    <div class="cube">
+      <div class="face front">Mikoto Suoh (Red King)</div>
+      <div class="face back">Reisi Munakata (Blue King)</div>
+      <div class="face top">Nagare Hisui (Green King)</div>
+      <div class="face bottom">Daikaku Kokujōj (Yellow King)</div>
+      <div class="face right">Adolf K. (Silver King)</div>
+      <div class="face left">Ichigen Miwa (White King)</div>
+    </div>
+  </div>
+  <div id="overlay"></div> <!-- Overlay gelap -->
+  <center>
+    <h1>K Project</h1>
+  </center>
+  <p id="judul">6 Raja di K Project</p>
+  <center>
+  <table style="margin-left: auto;margin-right: auto;" border="1" cellpadding="10">
+      <tr style="background-color: transparent;">
+          <td><p id="judul">Foto Raja</p></td>
+          <td><p id="judul">Profil Raja</p></td>
+      </tr> 
+      <tr>
+          <td><img src="1.png" style="width: 200px;height: 200px;"></td>
+          <td><p id="member">Nama : </p><p id="mnama">Mikoto Suoh (Red King)</p><br>
+              <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+              <p id="member">Faksi : </p><p id="mfaksi">HOMRA</p><br>
+              <p id="member">Kekuatan : </p><p id="mkekuatan">Manipulasi api</p><br>
+              <p id="member">Tugas : </p><p id="mtugas">Memimpin HOMRA dan melindungi anggotanya</p><br>
+      </tr>
+      <tr>
+        <td><img src="2.jpg" style="width: 200px;height: 200px;"></td>
+        <td><p id="member">Nama : </p><p id="mnama">Reisi Munakata (Blue King)</p><br>
+            <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+            <p id="member">Faksi : </p><p id="mfaksi">SCEPTER 4</p><br>
+            <p id="member">Kekuatan : </p><p id="mkekuatan">Kekuatan manipulasi energi biru</p><br>
+            <p id="member">Tugas : </p><p id="mtugas">Melindungi perdamaian dan menjaga kota dari kekacauan</p><br>
+      </tr>
+      <tr>
+        <td><img src="3.jpg" style="width: 200px;height: 200px;"></td>
+        <td><p id="member">Nama : </p><p id="mnama">Nagare Hisui (Green King)</p><br>
+            <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+            <p id="member">Faksi : </p><p id="mfaksi">Daikaku Kokujōji</p><br>
+            <p id="member">Kekuatan : </p><p id="mkekuatan">Kemampuan manipulasi energi hijau</p><br>
+            <p id="member">Tugas : </p><p id="mtugas">Menciptakan dunia yang baru tanpa kekerasan dan konflik</p><br>
+      </tr>
+      <tr>
+        <td><img src="4.jpg" style="width: 200px;height: 200px;"></td>
+        <td><p id="member">Nama : </p><p id="mnama">Daikaku Kokujōj (Yellow King)</p><br>
+            <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+            <p id="member">Faksi : </p><p id="mfaksi">Daikaku Kokujōji</p><br>
+            <p id="member">Kekuatan : </p><p id="mkekuatan">Kemampuan manipulasi energi kuning</p><br>
+            <p id="member">Tugas : </p><p id="mtugas">Menjaga keseimbangan kekuatan di antara tujuh raja dan mencegah peperangan yang merusak</p><br>
+      </tr>
+      <tr>
+        <td><img src="5.jpg" style="width: 200px;height: 200px;"></td>
+        <td><p id="member">Nama : </p><p id="mnama">Adolf K. Weismann (Silver King)</p><br>
+            <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+            <p id="member">Faksi : </p><p id="mfaksi">SELAYAWEISS</p><br>
+            <p id="member">Kekuatan : </p><p id="mkekuatan">Immortalitas, manipulasi elemen perak</p><br>
+            <p id="member">Tugas : </p><p id="mtugas">Mempertahankan kedamaian dan mencegah konflik di antara tujuh raja</p><br>
+      </tr>
+       <tr>
+         <td><img src="6.jpg" style="width: 200px;height: 200px;"></td>
+        <td><p id="member">Nama : </p><p id="mnama">Ichigen Miwa (White King)</p><br>
+            <p id="member">Jabatan : </p><p id="mjabatan">Kapten</p><br>
+            <p id="member">Faksi : </p><p id="mfaksi">unknown</p><br>
+            <p id="member">Kekuatan : </p><p id="mkekuatan">Kemampuan manipulasi memori, kemampuan khusus Neko</p><br>
+            <p id="member">Tugas : </p><p id="mtugas">unknown</p><br>
+      </tr>
+  </table>
+  </center>
+
+  <script>
+    // Ambil overlay gelap
+    var overlay = document.getElementById('overlay');
+
+    // Saat kursor masuk, atur opasitas overlay menjadi nol
+    overlay.addEventListener('mouseenter', function() {
+      overlay.style.opacity = '0';
+    });
+
+    // Saat kursor keluar, atur opasitas overlay kembali menjadi satu
+    overlay.addEventListener('mouseleave', function() {
+      overlay.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>

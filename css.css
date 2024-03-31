@@ -1,0 +1,142 @@
+body {
+    background-image: url("G.jpg");
+    background-size: cover;
+    margin: 0; /* Menghapus margin bawaan dari body */
+    font-family: Arial, sans-serif; /* Menggunakan font family yang umum */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay gelap */
+    z-index: 1; /* Menempatkan overlay di atas semua elemen */
+}
+
+#judul {
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+    text-align: center;
+    margin: 0;
+    font-size: 25px; /* Tambahkan unit px untuk ukuran font */
+}
+
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0.25); /* Mengurangi opacity menjadi 0.25 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Diperlukan untuk overlay bekerja dengan baik */
+    z-index: 2; /* Menempatkan kotak transparan di atas overlay */
+}
+
+table {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5); /* Warna background tidak transparan */
+    border-radius: 10px; /* Border radius untuk membuat sudut kotak menjadi melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan agar terlihat seperti melayang */
+    margin-top: 20px; /* Menambahkan margin atas untuk menjaga jarak dengan judul */
+    width: 80%; /* Menentukan lebar tabel */
+    max-width: 800px; /* Menentukan lebar maksimum tabel */
+    margin-left: auto; /* Meletakkan tabel di tengah */
+    margin-right: auto; /* Meletakkan tabel di tengah */
+}
+
+#jdl {
+    color: aqua;
+    text-align: center;
+}
+
+#member, #mnama, #mjabatan, #mfaksi, #mkekuatan, #mtugas {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.left-div {
+    width: 100px;
+    display: inline-block;
+}
+
+.right-div {
+    display: inline-block;
+}
+
+h1 {
+    color: white;
+}
+
+.element {
+    cursor: pointer;
+}
+
+.container {
+    perspective: 800px; /* Menentukan jarak pandang untuk animasi 3D */
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+}
+
+table {
+    transform-style: flat; /* Tetapkan transform-style menjadi flat agar tabel tidak terpengaruh oleh transformasi 3D */
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Untuk menjaga transformasi child elements dalam ruang 3D */
+    animation: spin 5s infinite linear; /* Animasi putaran selama 5 detik secara terus menerus */
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+.front {
+    background-color: red;
+    transform: translateZ(100px); /* Pergeseran ke depan sejauh 100px */
+}
+
+.back {
+    background-color: blue;
+    transform: rotateY(180deg) translateZ(100px); /* Rotasi 180 derajat dan pergeseran ke depan sejauh 100px */
+}
+
+.top {
+    background-color: green;
+    transform: rotateX(90deg) translateZ(100px); /* Rotasi 90 derajat pada sumbu X dan pergeseran ke depan sejauh 100px */
+}
+
+.bottom {
+    background-color: #f1c40f;
+    transform: rotateX(-90deg) translateZ(100px); /* Rotasi -90 derajat pada sumbu X dan pergeseran ke depan sejauh 100px */
+}
+
+.right {
+    background-color: silver;
+    transform: rotateY(90deg) translateZ(100px); /* Rotasi 90 derajat pada sumbu Y dan pergeseran ke depan sejauh 100px */
+}
+
+.left {
+    background-color: white;
+    transform: rotateY(-90deg) translateZ(100px); /* Rotasi -90 derajat pada sumbu Y dan pergeseran ke depan sejauh 100px */
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
